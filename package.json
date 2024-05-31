@@ -1,0 +1,23 @@
+{
+  "name": "proshop",
+  "version": "2.0.0",
+  "description": "eCommerce apllication with MERN stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehmetKaldirim/proshop.git"
+  },
+  "author": "Mehmet Kaldirim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehmetKaldirim/proshop/issues"
+  },
+  "homepage": "https://github.com/MehmetKaldirim/proshop#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
