@@ -6,7 +6,6 @@ import React from "react";
 import { useGetProductsQuery } from "../slices/productSlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-
 const HomeScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
   return (
