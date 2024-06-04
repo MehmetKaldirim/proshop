@@ -54,7 +54,7 @@ const ProfileScreen = () => {
     <Row>
       <Col md={3}>
         <h2>User Profile</h2>
-
+        {loadingUpdateProfile && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group className="my-2" controlId="name">
             <Form.Label>Name</Form.Label>
