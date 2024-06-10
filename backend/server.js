@@ -45,10 +45,12 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) =>
     res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
   );
+  console.log("if is work properly");
 } else {
   app.get("/", (req, res) => {
     res.send("API is running....");
   });
+  console.log("else is work properly");
 }
 
 app.use(notFound);
