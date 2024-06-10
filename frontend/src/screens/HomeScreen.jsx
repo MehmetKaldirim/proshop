@@ -22,7 +22,7 @@ const HomeScreen = () => {
   return (
     <>
       {keyword && (
-        <Link to="/" classname="btn btn-light mb-4">
+        <Link to="/" className="btn btn-light mb-4">
           Go Back
         </Link>
       )}
