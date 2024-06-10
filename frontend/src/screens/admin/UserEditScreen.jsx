@@ -98,6 +98,7 @@ const UserEditScreen = () => {
           </Form>
         )}
       </FormContainer>
+      {loadingUpdate && <Loader />}
     </>
   );
 };
