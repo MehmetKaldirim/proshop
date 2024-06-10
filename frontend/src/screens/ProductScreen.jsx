@@ -13,6 +13,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import Rating from "../components/Rating";
+import Meta from "../components/Meta";
 import {
   useGetProductDetailsQuery,
   useCreateReviewMutation,
@@ -76,6 +77,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta title={product.name} description={product.description} />
           <Row>
             <Col md={5}>
               <Image src={product.image} alt={product.name} fluid />
