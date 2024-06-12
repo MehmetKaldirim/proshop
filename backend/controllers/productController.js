@@ -47,16 +47,26 @@ const getProductById = asyncHandler(async (req, res) => {
 // @route   POST /api/products
 // @access  Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
+  const {
+    name,
+    price,
+    user,
+    image,
+    brand,
+    category,
+    countInStock,
+    description,
+  } = req.body;
   const product = new Product({
-    name: "Sample name",
-    price: 0,
-    user: req.user._id,
-    image: "/images/sample.jpg",
-    brand: "Sample brand",
-    category: "Sample category",
-    countInStock: 0,
+    name: name,
+    price: price,
+    user: user,
+    image: image,
+    brand: brand,
+    category: category,
+    countInStock: countInStock,
     numReviews: 0,
-    description: "Sample description",
+    description: description,
   });
 
   const createdProduct = await product.save();
@@ -82,7 +92,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.countInStock = countInStock;
 
     const updatedProduct = await product.save();
-    res.json(updatedProduct);
+    res.status(201).json(updatedProduct);
   } else {
     res.status(404);
     throw new Error("Product not found");

@@ -33,20 +33,6 @@ const ProductListScreen = () => {
     }
   };
 
-  const [createProduct, { isLoading: loadingCreate }] =
-    useCreateProductMutation();
-
-  const createProductHandler = async () => {
-    if (window.confirm("Are you sure you want to create a new product?")) {
-      try {
-        await createProduct();
-        refetch();
-      } catch (err) {
-        toast.error(err?.data?.message || err.error);
-      }
-    }
-  };
-
   return (
     <>
       <Row className="align-items-center">
@@ -54,7 +40,7 @@ const ProductListScreen = () => {
           <h1>Products</h1>
         </Col>
         <Col className="text-end">
-          <Button className="my-3" onClick={createProductHandler}>
+          <Button className="my-3" as={Link} to={`/admin/product/new`}>
             <FaPlus /> Create Product
           </Button>
         </Col>
