@@ -35,8 +35,12 @@ const Header = () => {
       <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <Navbar.Brand as={Link} to="/">
-            <img src={logo} alt="MathShop" />
-            ProShop
+            <img
+              src={logo}
+              alt="MathShop"
+              style={{ height: 30, marginRight: 8 }}
+            />
+            MathShop
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
